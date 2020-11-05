@@ -46,7 +46,6 @@ public class AddTaskActivity extends AppCompatActivity {
                     List<Notes> notes = MainActivity.myAppDatabase.dao().getNotes();
                     ArrayList Titles = new ArrayList();
                     if(notes.size() > 0){
-
                         for(Notes n:notes){
                             Titles.add(n.getTitle());
                         }
@@ -58,8 +57,13 @@ public class AddTaskActivity extends AppCompatActivity {
                             new AgentAsyncTask(Title,Des,AddTaskActivity.this).execute();
                             edtDes.setText("");
                             edtTitle.setText("");
-
                         }
+                    }else{
+                        String Title = edtTitle.getText().toString();
+                        String Des = edtDes.getText().toString();
+                        new AgentAsyncTask(Title,Des,AddTaskActivity.this).execute();
+                        edtDes.setText("");
+                        edtTitle.setText("");
                     }
 
 
