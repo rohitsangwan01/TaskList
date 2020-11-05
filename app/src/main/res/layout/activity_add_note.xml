@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_layout"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|left"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingTop="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:paddingBottom="@dimen/padding"
+            android:src="@drawable/btn_done" />
+
+
+        <com.an.customfontview.CustomTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-2dp"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="Add New Note"
+            android:textColor="@color/layout_title"
+            android:textSize="@dimen/font_xlarge" />
+
+
+        <com.an.customfontview.CustomTextView
+            android:id="@+id/btn_done"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="@dimen/padding"
+            android:paddingTop="@dimen/padding"
+            android:paddingRight="@dimen/margin_large"
+            android:paddingBottom="@dimen/padding"
+            android:text="@string/btn_done"
+            android:textColor="@color/btn_done_color"
+            android:textSize="@dimen/font_medium" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_large"
+        android:paddingTop="@dimen/margin_xxlarge"
+        android:paddingRight="@dimen/margin_large"
+        android:paddingBottom="@dimen/margin_large">
+
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Entre Title"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColor="@color/edit_title"
+            android:textColorHint="@color/bg_layout"
+            android:textCursorDrawable="@drawable/cursor_black"
+            android:textSize="20sp" />
+
+
+        <EditText
+            android:id="@+id/edtDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_xxxxlarge"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:hint="Entre Description"
+            android:inputType="textCapSentences|textMultiLine"
+            android:textColor="@color/edit_title"
+            android:textColorHint="@color/bg_layout"
+            android:textCursorDrawable="@drawable/cursor_black"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_done_color"
+        android:text="Back" />
+
+
+</LinearLayout>
